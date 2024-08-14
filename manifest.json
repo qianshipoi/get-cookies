@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "get cookies",
+  "version": "1.0.0",
+  "description": "get current page cookies",
+  "homepage_url": "https://www.kuriyama.top",
+  "icons": {
+      "48": "icons/icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icons/icon.png"
+    },
+    "default_title": "Get Cookies",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/jquery-3.7.1.min.js",
+        "js/jquery.toast.min.js",
+        "js/content-script.js"
+      ],
+      "css": [
+        "css/custom.css",
+        "css/jquery.toast.min.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "cookies"
+  ]
+}
